@@ -1,0 +1,66 @@
+{
+  "risk_free_rate": 0.045,
+
+  "sector_map": {
+    "AAPL": "Technology",
+    "MSFT": "Technology",
+    "NVDA": "Technology",
+    "GOOGL": "Technology",
+    "AMZN": "Consumer Discretionary",
+    "TSLA": "Consumer Discretionary",
+    "JPM":  "Financials",
+    "BAC":  "Financials",
+    "XOM":  "Energy",
+    "NOK":  "Technology"
+  },
+
+  "concentration": {
+    "ticker_cap_pct": 40,
+    "sector_cap_pct": 60
+  },
+
+  "iv_rank": {
+    "lookback_days": 252,
+    "min_days": 20,
+    "rich_threshold": 70,
+    "cheap_threshold": 30
+  },
+
+  "dte_warning_days": 45,
+
+  "macro_gate": {
+    "weights": {
+      "vix_level":     0.30,
+      "vix_term":      0.25,
+      "breadth":       0.25,
+      "credit_spread": 0.20
+    },
+    "vix_lookback_days": 252,
+    "breadth_proxy_ticker": "SPY"
+  },
+
+  "news": {
+    "window_days": 3,
+    "anthropic_model": "claude-haiku-4-5-20251001"
+  },
+
+  "alerts": {
+    "strike_band_pct": 30,
+    "target_near_pct": 80,
+    "iv_change_pct":   20
+  },
+
+  "notifier": {
+    "enabled": false,
+    "telegram": {
+      "bot_token_env": "TELEGRAM_BOT_TOKEN",
+      "chat_id_env":   "TELEGRAM_CHAT_ID"
+    },
+    "imessage": {
+      "recipient": ""
+    }
+  },
+
+  "db_path": "monitor.db",
+  "snapshots_dir": "snapshots"
+}

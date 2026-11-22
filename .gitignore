@@ -1,0 +1,25 @@
+# Secrets & local data — never commit
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite*
+*.log
+logs/
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+dist/
+build/
+# Node
+node_modules/
+.next/
+*.tsbuildinfo
+# OS
+.DS_Store
+Thumbs.db
+positions.json
+snapshots/
+monitor.db
